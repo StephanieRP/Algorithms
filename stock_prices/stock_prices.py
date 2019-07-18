@@ -5,9 +5,9 @@ import argparse
 
 def find_max_profit(prices):
     max_num = prices[1] - prices[0]  # subtracts first 2 prices
-       for i in range(0, len(prices)):
-            buy = prices[i]
-            for j in range(i + 1, len(prices)):
+       for i in range(0, len(prices)):  # loop through sale prices
+            buy = prices[i]  # define the buying value
+            for j in range(i + 1, len(prices)):  # loop through the prices comparing buy value
                 profit = prices[j] - buy
                 if profit > max_num:
                     max_num = profit
